@@ -3,8 +3,6 @@
 <aside>
 📝
 
-**Fiche technique #1** — À copier dans le fichier `01-entra-id-cycle-de-vie.md` du dépôt GitHub `tech-notes-iam-support`.
-
 Contenu ci-dessous écrit en Markdown standard, compatible avec l'affichage GitHub.
 
 </aside>
