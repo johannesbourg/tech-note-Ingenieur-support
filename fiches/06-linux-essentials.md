@@ -587,50 +587,6 @@ dig google.com
 
 ---
 
-## 🎯 9. Questions d'entretien fréquentes
-
-- **Q1 — Comment savoir quel processus consomme le plus de mémoire ?**
-    
-    `ps aux --sort=-%mem | head` ou plus interactivement `top` puis appuyer sur `M` pour trier par mémoire, ou `htop` si installé.
-    
-- **Q2 — Un service ne démarre pas, comment diagnostiquez-vous ?**
-    
-    Démarche en 4 étapes :
-    
-    1. `systemctl status nom-service` — voir l'état et les 10 dernières lignes de log
-    2. `journalctl -u nom-service -n 50 --no-pager` — logs plus complets
-    3. Vérifier la configuration : test de syntaxe si l'outil le permet (`nginx -t`, `apache2ctl configtest`)
-    4. Vérifier les dépendances (port libre avec `ss -tulpn`, fichier de conf présent, permissions, espace disque avec `df -h`)
-- **Q3 — Quelle différence entre `kill` et `kill -9` ?**
-    
-    `kill` (SIGTERM, signal 15) demande **poliment** au processus de s'arrêter, ce qui lui laisse le temps de fermer proprement ses connexions, sauvegarder son état, libérer les ressources.
-    
-    `kill -9` (SIGKILL) **force** l'arrêt immédiat sans que le processus puisse réagir. Risque de corruption de données, connexions non fermées. À utiliser en dernier recours quand le processus ne répond plus à SIGTERM.
-    
-- **Q4 — Le disque est plein, comment identifier ce qui prend de la place ?**
-    1. `df -h` — voir quelle partition est pleine
-    2. `du -h --max-depth=1 /var | sort -h` — trouver le plus gros dossier dans la partition concernée
-    3. Descendre progressivement : `du -h --max-depth=1 /var/log | sort -h`
-    4. Souvent : logs qui ont explosé, core dumps, anciennes sauvegardes
-    
-    Solutions : archivage/compression (`gzip`), rotation via `logrotate`, purge manuelle contrôlée.
-    
-- **Q5 — Quelle est la différence entre `>` et `>>` ?**
-    
-    `>` redirige la sortie et **écrase** le fichier de destination s'il existe.
-    
-    `>>` redirige la sortie et **ajoute à la fin** du fichier (append) sans écraser.
-    
-    Exemple : `echo "log" >> app.log` ajoute une ligne au log ; `echo "log" > app.log` remplace tout le contenu par cette seule ligne.
-    
-- **Q6 — Comment mettre en place une tâche qui s'exécute chaque nuit à 3h ?**
-    
-    `crontab -e` puis ajouter : `0 3 * * * /chemin/vers/script.sh`
-    
-    À vérifier : le script doit être exécutable (`chmod +x`), les chemins doivent être absolus (le cron a un PATH réduit), rediriger stdout/stderr vers un log pour déboguer : `0 3 * * * /opt/script.sh >> /var/log/script.log 2>&1`
-    
-
----
 
 ## 📚 Sources officielles
 
