@@ -60,7 +60,7 @@ pwd          # Dossier de travail actuel
 ls -la       # Contenu du home (fichiers cachés inclus)
 ```
 
-![01a-identite.png — Terminal Cloud Shell : whoami, pwd, ls -la](01a-identite.png)
+![01a-identite.png — Terminal Cloud Shell : whoami, pwd, ls -la](captures/01-identite.png)
 
 01a-identite.png — Terminal Cloud Shell : whoami, pwd, ls -la
 
@@ -73,7 +73,7 @@ cat /etc/os-release      # Distribution + version
 uname -a                  # Version du noyau Linux
 ```
 
-![01b-systeme.png — Distribution Ubuntu 24.04 LTS + noyau Linux](02-systeme.png)
+![01b-systeme.png — Distribution Ubuntu 24.04 LTS + noyau Linux](captures/02-systeme.png)
 
 01b-systeme.png — Distribution Ubuntu 24.04 LTS + noyau Linux
 
@@ -87,7 +87,7 @@ df -h        # Espace disque libre par partition
 nproc        # Nombre de CPU logiques
 ```
 
-![01c-ressources.png — Mémoire, disque et CPU disponibles](02-systeme.png)
+![01c-ressources.png — Mémoire, disque et CPU disponibles](captures/02-systeme.png)
 
 01c-ressources.png — Mémoire, disque et CPU disponibles
 
@@ -111,7 +111,7 @@ cp note1.txt note1-backup.txt      # Copie
 mv note2.txt notes-avancees.txt    # Renomme
 ```
 
-![02a-creation-fichiers.png — mkdir, touch, echo, cp, mv en action](04-creation-fichiers.png)
+![02a-creation-fichiers.png — mkdir, touch, echo, cp, mv en action](captures/04-creation-fichiers.png)
 
 02a-creation-fichiers.png — mkdir, touch, echo, cp, mv en action
 
@@ -126,7 +126,7 @@ ls -la                       # Vue détaillée
 tree                         # Vue arborescente
 ```
 
-![02b-arborescence.png — Sortie de ls -la et tree du dossier lab](05-arborescence.png)
+![02b-arborescence.png — Sortie de ls -la et tree du dossier lab](captures/05-arborescence.png)
 
 02b-arborescence.png — Sortie de ls -la et tree du dossier lab
 
@@ -149,7 +149,7 @@ ls -l hello.sh            # Permissions après chmod
 ./hello.sh                # Exécute le script
 ```
 
-![03-permissions-execution.png — chmod +x transforme rw-rw-r-- en rwxrwxr-x et lance hello.sh](06-permissions-execution.png)
+![03-permissions-execution.png — chmod +x transforme rw-rw-r-- en rwxrwxr-x et lance hello.sh](captures/06-permissions-execution.png)
 
 03-permissions-execution.png — chmod +x transforme rw-rw-r-- en rwxrwxr-x et lance hello.sh
 
@@ -183,7 +183,7 @@ EOF
 cat ~/faux.log       # Affiche l'intégralité du log
 ```
 
-![04a-log-genere.png — Log applicatif complet avec INFO/DEBUG/WARN/ERROR/FATAL](07-log-genere.png)
+![04a-log-genere.png — Log applicatif complet avec INFO/DEBUG/WARN/ERROR/FATAL](captures/07-log-genere.png)
 
 04a-log-genere.png — Log applicatif complet avec INFO/DEBUG/WARN/ERROR/FATAL
 
@@ -198,7 +198,7 @@ tail -3 ~/faux.log                # 3 dernières lignes
 awk '/ERROR|FATAL/ {print $2, $4}' ~/faux.log   # Heure + type d'erreur
 ```
 
-![04b-analyse-log.png — grep, tail, awk pour extraire les erreurs](08-analyse-log.png)
+![04b-analyse-log.png — grep, tail, awk pour extraire les erreurs](captures/08-analyse-log.png)
 
 04b-analyse-log.png — grep, tail, awk pour extraire les erreurs
 
@@ -228,7 +228,7 @@ ip a                         # Interfaces réseau et adresses IP
 ping -c 3 8.8.8.8            # 3 pings vers Google DNS
 ```
 
-![05a-interfaces-ping.png — ip a affiche lo/eth0/docker0 puis ping vers 8.8.8.8](09-interfaces-ping.png)
+![05a-interfaces-ping.png — ip a affiche lo/eth0/docker0 puis ping vers 8.8.8.8](captures/09-interfaces-ping.png)
 
 05a-interfaces-ping.png — ip a affiche lo/eth0/docker0 puis ping vers 8.8.8.8
 
@@ -240,7 +240,7 @@ ping -c 3 8.8.8.8            # 3 pings vers Google DNS
 curl -I https://www.google.com     # Headers HTTP uniquement
 ```
 
-![05b-curl-http.png — curl -I retourne HTTP/2 200 depuis google.com](10-curl-http.png)
+![05b-curl-http.png — curl -I retourne HTTP/2 200 depuis google.com](captures/10-curl-http.png)
 
 05b-curl-http.png — curl -I retourne HTTP/2 200 depuis google.com
 
@@ -252,7 +252,7 @@ curl -I https://www.google.com     # Headers HTTP uniquement
 dig google.com               # Résolution DNS complète
 ```
 
-![05c-dig-dns.png — dig google.com : ANSWER SECTION, Query time, SERVER](11-dig-dns.png)
+![05c-dig-dns.png — dig google.com : ANSWER SECTION, Query time, SERVER](captures/11-dig-dns.png)
 
 05c-dig-dns.png — dig google.com : ANSWER SECTION, Query time, SERVER
 
