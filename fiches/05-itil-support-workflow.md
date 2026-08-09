@@ -300,47 +300,6 @@ Johannes — Support IT L2
 
 ---
 
-## 🎯 11. Questions d'entretien fréquentes
-
-- **Q1 — Quelle est la différence entre un incident et une demande de service ?**
-    
-    Un **incident** est une interruption non planifiée d'un service : le service ne marche plus ou marche mal. Une **demande de service** est une demande de quelque chose de standard et pré-approuvé : nouvel accès, installation logiciel du catalogue, matériel supplémentaire.
-    
-    L'objectif d'un incident est de rétablir le service au plus vite ; celui d'une demande est de la livrer selon les délais du catalogue.
-    
-- **Q2 — Comment prioriseriez-vous un ticket ?**
-    
-    Je combine deux dimensions : l'**impact** (combien d'utilisateurs ou de services sont touchés) et l'**urgence** (à quel point c'est bloquant pour l'activité). Je croise les deux dans une matrice qui me donne une priorité de P1 (critique) à P5 (planifiée). Je vérifie aussi la matrice de priorité définie par l'entreprise, qui peut avoir ses propres règles métier.
-    
-- **Q3 — Un utilisateur est bloqué depuis 2 h et le SLA P2 expire dans 30 min. Que faites-vous ?**
-    
-    Je fais deux choses **en parallèle** :
-    
-    1. **Escalade fonctionnelle** : je passe le ticket au N2 avec un résumé de ce qui a été tenté, pour ne pas repartir de zéro.
-    2. **Escalade hiérarchique** : je signale à mon responsable ou à l'astreinte que le SLA est à risque, pour qu'il puisse anticiper la communication avec le métier ou débloquer une ressource.
-    
-    Je tiens aussi l'utilisateur informé du statut, sans faire de promesse que je ne pourrais pas tenir.
-    
-- **Q4 — Qu'est-ce qu'un problème en ITIL ?**
-    
-    Un **problème** est la cause racine d'un ou plusieurs incidents. Alors qu'un incident vise à rétablir le service (parfois par contournement), un problème vise à identifier et éliminer la cause pour empêcher la récurrence.
-    
-    **Exemple :** 30 utilisateurs signalent des BSOD après un patch Windows → 30 incidents mais **1 problème** (le patch défectueux).
-    
-- **Q5 — Que signifient MTTR et FCR, et pourquoi c'est important ?**
-    
-    **MTTR** (Mean Time To Resolve) est le temps moyen de résolution des tickets. **FCR** (First Contact Resolution) est le pourcentage de tickets résolus dès le premier contact avec l'utilisateur.
-    
-    Ce sont deux indicateurs clés de la qualité du support : un MTTR bas et un FCR élevé indiquent une équipe efficace, avec une base de connaissances riche et des collaborateurs bien formés.
-    
-- **Q6 — Comment gérez-vous un utilisateur agressif au téléphone ?**
-    
-    Je garde le calme et je ne prends pas les propos personnellement. J'écoute jusqu'au bout sans interrompre pour laisser la personne exprimer sa frustration. Je reformule le problème pour montrer que j'ai compris ("Si je résume, votre problème est X, et ça vous bloque pour Y"). Puis je passe à l'action concrète : soit je résous, soit j'annonce un délai clair et je m'y tiens.
-    
-    Si le comportement dépasse le cadre acceptable, je préviens poliment que je vais devoir passer le relais à mon responsable, et j'escalade.
-    
-
----
 
 ## 📚 Sources officielles
 
