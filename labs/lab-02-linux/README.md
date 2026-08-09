@@ -267,7 +267,7 @@ dig google.com               # Résolution DNS complète
 | Le service web répond-il ? | `curl -I https://site` | Serveur applicatif down |
 | Le nom est-il résolu ? | `dig site.com` | DNS mal configuré |
 
-**Scénario type :** un utilisateur signale "je n'accède pas à [intranet.entreprise.com](http://intranet.entreprise.com)". Enchaîner ces 4 commandes dans l'ordre depuis un serveur de rebond permet de localiser le problème en moins d'une minute : est-ce le réseau local, la sortie Internet, le DNS, ou le serveur applicatif ?
+**Scénario type :** un utilisateur signale "je n'accède pas à [intranet.entreprise.com](http://intranet.entreprise.com)". Enchaîner ces 4 commandes dans l'ordre depuis un serveur de rebond permet de localiser le problème en moins d'une minute : réseau local, sortie Internet, DNS ou serveur applicatif.
 
 ---
 
