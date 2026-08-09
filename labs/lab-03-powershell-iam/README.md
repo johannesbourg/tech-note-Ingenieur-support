@@ -83,15 +83,15 @@ Get-LocalUser | Where-Object { $_.Name -like "test.user*" } | Format-Table -Auto
 "test.user1","test.user2","test.user3" | ForEach-Object { Remove-LocalUser -Name $_ }
 ```
 
-![Capture B1 — Création batch réussie de test.user1, test.user2, test.user3 en Windows PowerShell 5.1 admin](a0a480da-53ac-4a38-b779-10038ca8ee1c.png)
+![Capture B1 — Création batch réussie de test.user1, test.user2, test.user3 en Windows PowerShell 5.1 admin](captures/a0a480da-53ac-4a38-b779-10038ca8ee1c.png)
 
 Capture B1 — Création batch réussie de test.user1, test.user2, test.user3 en Windows PowerShell 5.1 admin
 
-![Capture B2 — Démonstration du workflow disable-puis-remove : Disable-LocalUser test.user2 (désactivation) puis Remove-LocalUser test.user3 (suppression)](75467381-58ac-46e9-8d21-8b48fd004512.png)
+![Capture B2 — Démonstration du workflow disable-puis-remove : Disable-LocalUser test.user2 (désactivation) puis Remove-LocalUser test.user3 (suppression)](captures/75467381-58ac-46e9-8d21-8b48fd004512.png)
 
 Capture B2 — Démonstration du workflow disable-puis-remove : Disable-LocalUser test.user2 (désactivation) puis Remove-LocalUser test.user3 (suppression)
 
-![Capture B3 — État final après opérations : test.user2 conservé mais Enabled=False (désactivé). Différence clé entre Disable (compte inactif) et Remove (compte supprimé)](d0567c52-0c55-456a-9856-263226e99198.png)
+![Capture B3 — État final après opérations : test.user2 conservé mais Enabled=False (désactivé). Différence clé entre Disable (compte inactif) et Remove (compte supprimé)](captures/d0567c52-0c55-456a-9856-263226e99198.png)
 
 Capture B3 — État final après opérations : test.user2 conservé mais Enabled=False (désactivé). Différence clé entre Disable (compte inactif) et Remove (compte supprimé)
 
@@ -115,7 +115,7 @@ Garcia,Carla,cgarcia,Finance,Comptable
 Get-Content .\lab-c-users.csv
 ```
 
-![Capture C1 — Création du CSV via here-string @"..."@ + vérification avec Get-Content : header + 3 lignes utilisateurs Martin/Dupont/Garcia](c48ea148-732f-4af6-984b-f285891a8573.png)
+![Capture C1 — Création du CSV via here-string @"..."@ + vérification avec Get-Content : header + 3 lignes utilisateurs Martin/Dupont/Garcia](captures/c48ea148-732f-4af6-984b-f285891a8573.png)
 
 Capture C1 — Création du CSV via here-string @"..."@ + vérification avec Get-Content : header + 3 lignes utilisateurs Martin/Dupont/Garcia
 
@@ -135,7 +135,7 @@ Import-Csv -Path .\lab-c-users.csv | ForEach-Object {
 Get-LocalUser | Where-Object { $_.Name -in @("amartin","bdupont","cgarcia") } | Format-Table -AutoSize
 ```
 
-![Capture C2 — Import-Csv en pipeline vers ForEach-Object : les 3 utilisateurs amartin, bdupont, cgarcia créés avec confirmation « ✅ Créé » en vert et tableau récapitulatif](d862f62f-2a34-42dc-84d7-04b89b64da13.png)
+![Capture C2 — Import-Csv en pipeline vers ForEach-Object : les 3 utilisateurs amartin, bdupont, cgarcia créés avec confirmation « ✅ Créé » en vert et tableau récapitulatif](captures/d862f62f-2a34-42dc-84d7-04b89b64da13.png)
 
 Capture C2 — Import-Csv en pipeline vers ForEach-Object : les 3 utilisateurs amartin, bdupont, cgarcia créés avec confirmation « ✅ Créé » en vert et tableau récapitulatif
 
@@ -146,11 +146,11 @@ Capture C2 — Import-Csv en pipeline vers ForEach-Object : les 3 utilisateurs a
 Get-LocalUser | Where-Object { $_.Name -in @("amartin","bdupont","cgarcia") }  # doit être vide
 ```
 
-![Capture C3a — Vérification Get-LocalUser (les 3 users présents et Enabled=True) puis lancement de Remove-LocalUser en pipeline](5e1aae22-c511-45e2-bd3b-abef03060043.png)
+![Capture C3a — Vérification Get-LocalUser (les 3 users présents et Enabled=True) puis lancement de Remove-LocalUser en pipeline](captures/5e1aae22-c511-45e2-bd3b-abef03060043.png)
 
 Capture C3a — Vérification Get-LocalUser (les 3 users présents et Enabled=True) puis lancement de Remove-LocalUser en pipeline
 
-![Capture C3b — Nettoyage terminé : Remove-LocalUser exécuté sans erreur, retour à l'invite propre (aucun message = succès silencieux)](75635864-7902-46e1-bbfc-bf5e1d1e4601.png)
+![Capture C3b — Nettoyage terminé : Remove-LocalUser exécuté sans erreur, retour à l'invite propre (aucun message = succès silencieux)](captures/75635864-7902-46e1-bbfc-bf5e1d1e4601.png)
 
 Capture C3b — Nettoyage terminé : Remove-LocalUser exécuté sans erreur, retour à l'invite propre (aucun message = succès silencieux)
 
@@ -179,7 +179,7 @@ Capture C3b — Nettoyage terminé : Remove-LocalUser exécuté sans erreur, ret
 Install-Module Microsoft.Graph -Scope CurrentUser -Force -AllowClobber
 ```
 
-![Capture D1 — Résultat après tout le parcours d'installation : $PSVersionTable.PSVersion confirme PowerShell 7.6.4 + Get-Module Microsoft.Graph -ListAvailable montre la version 2.39.0 installée avec succès](da9cc616-6f79-448d-b963-84ed8fc55bba.png)
+![Capture D1 — Résultat après tout le parcours d'installation : $PSVersionTable.PSVersion confirme PowerShell 7.6.4 + Get-Module Microsoft.Graph -ListAvailable montre la version 2.39.0 installée avec succès](captures/da9cc616-6f79-448d-b963-84ed8fc55bba.png)
 
 Capture D1 — Résultat après tout le parcours d'installation : $PSVersionTable.PSVersion confirme PowerShell 7.6.4 + Get-Module Microsoft.Graph -ListAvailable montre la version 2.39.0 installée avec succès
 
@@ -214,11 +214,11 @@ Get-Command -Module Microsoft.Graph.Users | Measure-Object  # → Count : 212
 Get-Help New-MgUser -Examples
 ```
 
-![Capture D2 — Import-Module Microsoft.Graph.Users puis Get-Command | Measure-Object : Count 212 cmdlets disponibles pour manipuler les utilisateurs Entra ID depuis PowerShell 7](542862ce-0e06-424a-b073-834e8c9ade40.png)
+![Capture D2 — Import-Module Microsoft.Graph.Users puis Get-Command | Measure-Object : Count 212 cmdlets disponibles pour manipuler les utilisateurs Entra ID depuis PowerShell 7](captures/542862ce-0e06-424a-b073-834e8c9ade40.png)
 
 Capture D2 — Import-Module Microsoft.Graph.Users puis Get-Command | Measure-Object : Count 212 cmdlets disponibles pour manipuler les utilisateurs Entra ID depuis PowerShell 7
 
-![Capture D3 — Get-Help New-MgUser -Examples : documentation intégrée avec exemple complet (utilisateur Rene Magi, PasswordProfile, AccountEnabled, MailNickName, UserPrincipalName). Prêt à être utilisé après connexion à un tenant Entra ID via Connect-MgGraph](b848908b-8c11-4363-855b-881f1a17a5ca.png)
+![Capture D3 — Get-Help New-MgUser -Examples : documentation intégrée avec exemple complet (utilisateur Rene Magi, PasswordProfile, AccountEnabled, MailNickName, UserPrincipalName). Prêt à être utilisé après connexion à un tenant Entra ID via Connect-MgGraph](captures/b848908b-8c11-4363-855b-881f1a17a5ca.png)
 
 Capture D3 — Get-Help New-MgUser -Examples : documentation intégrée avec exemple complet (utilisateur Rene Magi, PasswordProfile, AccountEnabled, MailNickName, UserPrincipalName). Prêt à être utilisé après connexion à un tenant Entra ID via Connect-MgGraph
 
