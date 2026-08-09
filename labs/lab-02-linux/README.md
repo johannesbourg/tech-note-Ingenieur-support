@@ -252,7 +252,7 @@ curl -I https://www.google.com     # Headers HTTP uniquement
 dig google.com               # Résolution DNS complète
 ```
 
-![05c-dig-dns.png — dig google.com : ANSWER SECTION, Query time, SERVER](captures/11-dig-dns.png)
+![05c-dig-dns.png — dig google.com : ANSWER SECTION, Query time, SERVER](11-dig-dns.png)
 
 05c-dig-dns.png — dig google.com : ANSWER SECTION, Query time, SERVER
 
