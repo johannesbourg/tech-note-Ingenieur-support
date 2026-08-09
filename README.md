@@ -51,9 +51,6 @@ Environnements réels avec captures d'écran authentiques.
 - Microsoft Azure Fundamentals (AZ-900)
 - AWS Certified Cloud Practitioner
 - Microsoft Certified: Power BI Data Analyst Associate
-- Oracle Cloud Infrastructure 2021 Architect Professional (1Z0-997-21)
-- Oracle Cloud Infrastructure 2021 Architect Associate (1Z0-1072-21)
-- Oracle Cloud Infrastructure Foundations 2021 Associate (1Z0-1085-21)
 
 **En préparation**
 - ITIL 4 Foundation
