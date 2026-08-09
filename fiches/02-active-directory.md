@@ -536,40 +536,7 @@ Get-ADUser -Filter { whenCreated -ge (Get-Date).AddDays(-7) }
 - **Event Viewer** : `System`, `Directory Service`, `DNS Server`, `Security`
 - **PowerShell** : `Get-Winevent`, `Test-ComputerSecureChannel`
 
----
 
-## 12. 💼 Questions d'entretien fréquentes
-
-1. **« Décrivez ce qu'est un contrôleur de domaine (DC). »**
-    
-    → Serveur Windows Server ayant AD DS installé et promu. Héberge une réplique de la base AD (`ntds.dit`) et fournit LDAP, Kerberos, DNS.
-    
-2. **« Quelle est la différence entre un groupe Global et un groupe Universal ? »**
-    
-    → Voir tableau section 3. Point clé : les groupes Universal sont **répliqués dans le Global Catalog**, donc chaque changement d'appartenance a un coût de réplication inter-domaines.
-    
-3. **« Comment restaurer un utilisateur supprimé accidentellement ? »**
-    
-    → Si la corbeille AD est activée : `Get-ADObject -Filter {SamAccountName -eq "jdupont"} -IncludeDeletedObjects | Restore-ADObject`. Sinon : restauration authoritative via Windows Server Backup.
-    
-4. **« Un poste ne peut plus se connecter au domaine, secure channel cassé. Que faites-vous ? »**
-    
-    → 1) `Test-ComputerSecureChannel` pour confirmer. 2) `Reset-ComputerMachinePassword` sans quitter le domaine. 3) En dernier recours : sortir/réintégrer du domaine.
-    
-5. **« Expliquez le principe AGDLP. »**
-    
-    → **A**ccounts (users) → **G**lobal groups (par rôle métier) → **D**omain **L**ocal groups (par permission ressource) → **P**ermissions (ACL sur la ressource). Permet la séparation des concernes et facilite la maintenance.
-    
-6. **« PDC Emulator, à quoi ça sert au quotidien ? »**
-    
-    → Source de temps du domaine, applique les changements de mot de passe en priorité, gère les verrouillages de compte, prend en charge les clients pré-Win2000.
-    
-7. **« Un utilisateur clignote entre verrouillé et déverrouillé. Où chercher ? »**
-    
-    → Sur le **PDC Emulator** dans le Security log, Event ID **4740**. La colonne *Caller Computer Name* indique la source.
-    
-
----
 
 ## 13. 📚 Sources officielles
 
