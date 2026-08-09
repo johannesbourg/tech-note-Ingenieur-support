@@ -521,56 +521,6 @@ Get-Help Search-ADAccount -Full     # Comprendre les filtres
 
 ---
 
-## 🎓 10. Questions d'entretien fréquentes
-
-- **Q1 — Différence entre AzureAD, MSOnline et Microsoft.Graph ?**
-    - **MSOnline** (le plus ancien) : module hérité pour Office 365, déprécié depuis 2024.
-    - **AzureAD** : module intermédiaire pour Azure AD, aussi déprécié depuis 2024.
-    - **Microsoft.Graph** : le module officiel actuel, unifié pour Entra ID + M365 + Teams + SharePoint + Intune. **C'est celui à utiliser** en 2026.
-    
-    En entretien : mentionner qu'on utilise Microsoft.Graph, tout en sachant lire un ancien script en AzureAD s'il faut le migrer.
-    
-- **Q2 — Comment créer 100 utilisateurs à la fois ?**
-    1. Préparer un fichier CSV avec les colonnes nécessaires (login, nom, département, etc.)
-    2. `Import-Csv` pour charger le CSV
-    3. Pipeline `| ForEach-Object { New-MgUser ... }` pour créer chaque ligne
-    4. Toujours logger le résultat (succès / échec) et faire un dry-run sur 2-3 lignes avant le lot complet
-- **Q3 — Comment identifier les comptes inactifs depuis 90 jours ?**
-    
-    **AD DS :**
-    
-    ```powershell
-    Search-ADAccount -AccountInactive -TimeSpan 90.00:00:00 -UsersOnly | 
-        Select-Object Name, LastLogonDate
-    ```
-    
-    **Entra ID (via Microsoft.Graph) :**
-    
-    ```powershell
-    Get-MgUser -All -Property SignInActivity | 
-        Where-Object { $_.SignInActivity.LastSignInDateTime -lt (Get-Date).AddDays(-90) }
-    ```
-    
-    Cas support : nettoyer périodiquement pour libérer des licences et réduire la surface d'attaque.
-    
-- **Q4 — Quelle différence entre `Disable-ADAccount` et `Remove-ADUser` ?**
-    - `Disable-ADAccount` : désactive le compte mais le conserve. Réversible.
-    - `Remove-ADUser` : supprime définitivement. En AD DS, c'est irréversible sans restauration depuis une sauvegarde AD ou depuis l'AD Recycle Bin (si activé).
-    
-    Bonne pratique en offboarding : **désactiver d'abord**, attendre 30-90 jours (rétention légale + éviter un rappel immédiat), puis supprimer.
-    
-- **Q5 — Comment gérer les secrets (mots de passe, tokens) dans un script PowerShell ?**
-    - ❌ **JAMAIS en clair** dans le script (`$pwd = "Motdepasse123"`)
-    - ✅ Demander interactivement : `Read-Host -AsSecureString`
-    - ✅ Stocker dans un **coffre-fort** : SecretManagement module + backend (Azure Key Vault, Windows Credential Manager)
-    - ✅ Pour Entra ID : utiliser une **app registration** avec certificat, pas un secret
-- **Q6 — Comment tester un script sans risque avant production ?**
-    - Utiliser le paramètre `-WhatIf` (dry-run) : `New-MgUser -WhatIf` montre ce qui serait fait sans le faire
-    - Le paramètre `-Confirm` demande confirmation avant chaque opération
-    - Toujours tester sur un environnement de dev/lab avant d'exécuter en prod
-    - Versionner les scripts (Git), documenter les changements, faire relire par un pair
-
----
 
 ## 🔐 11. Bonnes pratiques sécurité
 
