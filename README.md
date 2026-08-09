@@ -1,6 +1,6 @@
 # 🛠️ Tech Notes — IAM & Support IT
 
-> Portfolio technique de **Daniel ASSOU ZIKPO** — Ingénieur IT · Support N2/N3 · IAM · Abidjan
+> Portfolio technique de **Daniel ASSOU ZIKPO** — IT  Support · Abidjan
 >
 > Fiches techniques + labs pratiques réalisés dans le cadre de ma préparation aux certifications **Microsoft SC-300** (Identity and Access Administrator) et **ITIL 4 Foundation**.
 
@@ -11,9 +11,9 @@
 
 ## 👤 Qui suis-je ?
 
-Ingénieur IT avec **7+ ans d'expérience** en support IT, administration Active Directory et gestion des incidents selon ITIL. Actuellement **point focal régional du SIGS** au Ministère des Sports (Côte d'Ivoire), j'élargis activement mon expertise vers les identités cloud (Microsoft Entra ID, Hybrid Identity, IAM).
+Avec **7+ ans d'expérience** en support IT, administration Active Directory et gestion des incidents selon ITIL. Actuellement **Chargé du systeme d'information** au Ministère des Sports (Côte d'Ivoire), 
 
-**Ce que je cherche :** un poste de **Spécialiste Support IT N2/N3**, **Ingénieur Système AD/Entra ID** ou **Support Applicatif** dans un environnement exigeant où je peux mettre à profit ma rigueur, mon expérience du support critique et ma capacité à documenter et former.
+**Ce que je cherche :** un poste de **Spécialiste Support IT N2/N3**, **Ingénieur Système IAM** ou **Support Applicatif** dans un environnement exigeant où je peux mettre à profit ma rigueur, mon expérience du support critique et ma capacité à documenter et former.
 
 ---
 
@@ -72,9 +72,9 @@ Environnements réels avec captures d'écran authentiques.
 
 ## 💼 Parcours professionnel
 
-- **Technicien supérieur en informatique — Point focal SIGS** · Ministère des Sports (Juin 2024 → aujourd'hui)
+- **Chargé du systeme d'Information** · Ministère des Sports (Juin 2024 → aujourd'hui)
 - **Chargé de support GMAO & Reporting BI** · Global Services (Sept. 2021 → Oct. 2023)
-- **Chargé de support IT — Help Desk** · Mondial Logistique (Mai 2020 → Août 2021)
+- **IT — Help Desk** · Mondial Logistique (Mai 2020 → Août 2021)
 - **Assistant IT** · Ecobank (Juil. 2019 → Mars 2020)
 
 ---
