@@ -32,17 +32,14 @@ Documentation opérationnelle basée sur les sources officielles Microsoft Learn
 
 ---
 
-## 🧪 Labs pratiques (3)
+## 🧪 Labs pratiques (2)
 
 Environnements réels avec captures d'écran authentiques.
 
-### 🔐 [Lab 1 — Entra ID depuis zéro (Cloud-first)](./labs/lab-01-entra-id)
-Approche théorique et pratique cloud pour comprendre le cycle de vie d'une identité Entra ID.
-
-### 🐧 [Lab 2 — Linux Essentials sur Google Cloud Shell](./labs/lab-02-linux)
+### 🐧 [Linux Essentials sur Google Cloud Shell](./labs/lab-02-linux)
 **11 captures Ubuntu 24.04 LTS** — navigation FHS, permissions, création/manipulation de fichiers, analyse de logs (`grep`, `awk`, `tail`), diagnostic réseau (`ip`, `ping`, `curl`, `dig`).
 
-### ⚡ [Lab 3 — PowerShell IAM en pratique](./labs/lab-03-powershell-iam)
+### ⚡ [PowerShell IAM en pratique](./labs/lab-03-powershell-iam)
 **12 captures PowerShell 5.1 & 7** — gestion utilisateurs Windows locaux, automation par lot depuis CSV, installation Microsoft.Graph SDK 2.39.0, diagnostic **silent failure Windows Update**, résolution **TLS 1.2** pour PowerShell Gallery.
 
 ---
@@ -67,7 +64,7 @@ Approche théorique et pratique cloud pour comprendre le cycle de vie d'une iden
 ## 🛠️ Méthodologie
 
 - **Sources** — chaque fiche cite explicitement les pages de documentation officielle utilisées
-- **Scripts** — testés sur environnements gratuits (Google Cloud Shell, PowerShell local, Microsoft Learn Sandbox)
+- **Scripts** — testés sur environnements gratuits (Google Cloud Shell, PowerShell local)
 - **Documentation honnête** — les échecs rencontrés (silent failure RSAT, portail Azure bloqué en région) sont documentés comme des points d'apprentissage exploitables en entretien
 - **Format** — Markdown standard lisible directement sur GitHub, captures d'écran authentiques
 
