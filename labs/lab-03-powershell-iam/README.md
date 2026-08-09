@@ -42,11 +42,11 @@ Get-Help Get-LocalUser -Examples
 Get-Process | Sort-Object CPU -Descending | Select-Object -First 5 Name, CPU, Id
 ```
 
-![Capture A1a — $PSVersionTable en PowerShell 7.6.4 + Get-Help System (aide intégrée)](5cba2866-70b6-4801-b2f6-a615b0444f1c.png)
+![Capture A1a — $PSVersionTable en PowerShell 7.6.4 + Get-Help System (aide intégrée)](captures/5cba2866-70b6-4801-b2f6-a615b0444f1c.png)
 
 Capture A1a — $PSVersionTable en PowerShell 7.6.4 + Get-Help System (aide intégrée)
 
-![Capture A1b — Get-Command : exploration de l'écosystème complet de cmdlets, alias et functions disponibles](15729e3a-bd62-4077-b1b0-8aff13ff5724.png)
+![Capture A1b — Get-Command : exploration de l'écosystème complet de cmdlets, alias et functions disponibles](captures/15729e3a-bd62-4077-b1b0-8aff13ff5724.png)
 
 Capture A1b — Get-Command : exploration de l'écosystème complet de cmdlets, alias et functions disponibles
 
