@@ -60,7 +60,7 @@ pwd          # Dossier de travail actuel
 ls -la       # Contenu du home (fichiers cachés inclus)
 ```
 
-![01a-identite.png — Terminal Cloud Shell : whoami, pwd, ls -la](01-identité.png)
+![01a-identite.png — Terminal Cloud Shell : whoami, pwd, ls -la](01a-identite.png)
 
 01a-identite.png — Terminal Cloud Shell : whoami, pwd, ls -la
 
