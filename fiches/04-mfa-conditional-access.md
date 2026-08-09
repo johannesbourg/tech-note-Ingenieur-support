@@ -291,44 +291,8 @@ Scénarios réels où ils servent :
 - Si policy erronée → escalader vers l'équipe sécurité pour ajustement
 - Utiliser **CA What-If tool** pour tester avant modification
 
-## 12. Questions d'entretien — MFA & Conditional Access
 
-### Q1 : Quelle est la différence entre MFA et 2FA ?
-
-> Techniquement, 2FA (two-factor authentication) est un sous-ensemble de MFA (multi-factor authentication) où on exige exactement 2 facteurs. MFA peut demander 2 facteurs ou plus. Dans le langage courant, les deux sont souvent employés de manière interchangeable pour désigner une authentification à plusieurs facteurs.
-> 
-
-### Q2 : Qu'est-ce que le number matching et pourquoi c'est important ?
-
-> Le number matching, imposé par Microsoft depuis mai 2023, exige que l'utilisateur saisisse un nombre affiché à l'écran de sign-in dans son app Microsoft Authenticator. C'est la contre-mesure aux **MFA fatigue attacks**, où un attaquant spammait des push notifications espérant que l'utilisateur finisse par approuver par réflexe. Avec number matching, l'approbation devient consciente.
-> 
-
-### Q3 : Comment fonctionne une policy Conditional Access ?
-
-> Une policy CA suit la logique « Si → Alors ». Les **Assignments** définissent QUI (utilisateurs, groupes, rôles) accède à QUOI (cloud apps) et sous quelles **Conditions** (localisation, plateforme, risque, état du device). Les **Access Controls** définissent ensuite l'action : Grant (autoriser avec exigences comme MFA ou device compliant), Block, ou Session (limitations). Toutes les policies applicables sont combinées en ET logique.
-> 
-
-### Q4 : Qu'est-ce qu'un compte break-glass et pourquoi c'est essentiel ?
-
-> Un compte break-glass est un compte Global Administrator d'urgence, exclu de toutes les policies MFA et Conditional Access, avec un mot de passe long stocké physiquement en coffre. Chaque tenant doit en avoir **2**. Ils permettent de récupérer l'accès si le service MFA Microsoft est indisponible, si une policy CA verrouille tous les admins, ou en cas de panne du fournisseur d'identité fédéré. C'est une règle **non négociable** de sécurité IAM.
-> 
-
-### Q5 : Différence entre « Require MFA » simple et Authentication Strengths ?
-
-> `Require MFA` accepte n'importe quelle combinaison de 2 facteurs, y compris le SMS qui est phishable. **Authentication Strengths** permet d'exiger des méthodes spécifiques : par exemple, `Phishing-resistant MFA` limite à passkeys, FIDO2 keys, Windows Hello ou CBA. C'est beaucoup plus précis et sécurisé pour protéger les ressources sensibles ou les rôles admin.
-> 
-
-### Q6 : Comment débugger un utilisateur bloqué par une policy CA ?
-
-> Direction **Entra Admin Center → Monitoring → Sign-in logs**. On filtre sur l'UPN, on ouvre le sign-in en échec, et on va dans l'onglet **Conditional Access** qui liste toutes les policies évaluées avec leur statut (Success / Failure / Not applied). La policy en `Failure` (rouge) est celle qui bloque. On peut aussi utiliser le **CA What-If tool** pour simuler l'impact d'une modification avant de la déployer.
-> 
-
-### Q7 : Qu'est-ce qu'une passkey et pourquoi Microsoft les pousse ?
-
-> Une passkey est une paire de clés cryptographiques (publique/privée) liée à un service, où la clé privée ne quitte jamais l'appareil. L'authentification se fait par signature cryptographique + biométrie locale (Face ID, empreinte). Microsoft les pousse car elles sont **phishing-resistant par nature** : aucun secret n'est jamais tapé ou envoyé, donc impossible à intercepter ou à réutiliser sur un site malveillant. C'est l'avenir du passwordless.
-> 
-
-## 13. Best practices sécurité — checklist L2
+## 12. Best practices sécurité — checklist L2
 
 <aside>
 ✅
