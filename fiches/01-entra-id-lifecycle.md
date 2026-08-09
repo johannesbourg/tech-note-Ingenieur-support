@@ -376,34 +376,6 @@ Write-Host "📌 N'oubliez pas : conversion boîte mail, transfert OneDrive, sup
 - Supprimer immédiatement un compte au départ (perte des données non transférées)
 - Communiquer les identifiants dans un seul canal (email + mot de passe dans le même mail)
 
----
-
-## 8. 🎓 Questions d'entretien types
-
-Voici les questions que j'anticipe pour un poste IAM et mes réponses type :
-
-**Q1 : "Décrivez les étapes d'un offboarding sécurisé sur Entra ID."**
-
-→ Suivre la liste des 8 étapes ci-dessus, en insistant sur : bloquer + révoquer les sessions + retirer MFA + convertir la mailbox.
-
-**Q2 : "Quelle est la différence entre bloquer un utilisateur et le supprimer ?"**
-
-→ Bloquer (`accountEnabled = false`) empêche la connexion mais conserve toutes les données et l'appartenance aux groupes. Supprimer place l'utilisateur dans la corbeille (30 jours de rétention) puis le purge définitivement. Bonne pratique : bloquer immédiatement, supprimer après période de rétention.
-
-**Q3 : "Comment gérez-vous les licences M365 pour 500 utilisateurs ?"**
-
-→ Group-Based Licensing avec des groupes dynamiques basés sur `department`. Aucune attribution manuelle. Un rapport Power BI hebdomadaire alerte sur les écarts.
-
-**Q4 : "Un utilisateur ne peut pas se connecter, que faites-vous ?"**
-
-→ Méthode structurée : (1) vérifier `accountEnabled`, (2) vérifier les Sign-in logs pour identifier le code d'erreur, (3) vérifier si une politique d'accès conditionnel bloque, (4) vérifier l'état MFA, (5) vérifier la licence.
-
-**Q5 : "Qu'est-ce qu'un compte Break Glass et pourquoi en avoir ?"**
-
-→ Compte d'urgence qui reste toujours accessible, exclu de MFA et Conditional Access, avec un mot de passe en coffre physique. Sert quand un incident bloque tous les autres admins (ex. politique CA mal configurée).
-
----
-
 ## 9. 📚 Sources et pour aller plus loin
 
 ### Sources officielles vérifiées (avec captures d'écran incluses)
